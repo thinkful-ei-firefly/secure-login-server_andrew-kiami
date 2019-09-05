@@ -19,7 +19,7 @@ thingsRouter
   .route('/:thing_id')
   .all(requireAuth)
   .all(checkThingExists)
-  .get((req, res) => {
+  .get((req, res ) => {
     res.json(ThingsService.serializeThing(res.thing))
   })
 
